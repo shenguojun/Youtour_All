@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/grey"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/searchBtton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/selector_imagebutton"
+            android:onClick="searchClicked"
+            android:src="@drawable/search" />
+
+        <ImageView
+            android:id="@+id/banner"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/grey"
+            android:src="@drawable/banner_with_fengqi"
+            android:layout_marginLeft="10dp" />
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:overScrollMode="never"
+        android:paddingTop="15dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/place"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/blue"
+                android:gravity="center_horizontal"
+                android:onClick="placeClicked"
+                android:paddingTop="25dp"
+                android:text="@string/place"
+                android:textColor="@color/whitetransparent"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/topic"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/red"
+                android:gravity="center_horizontal"
+                android:onClick="topicClicked"
+                android:paddingTop="25dp"
+                android:text="@string/topic"
+                android:textColor="@color/whitetransparent"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/nearme"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/yellow"
+                android:gravity="center_horizontal"
+                android:onClick="nearmeClicked"
+                android:paddingTop="25dp"
+                android:text="@string/nearme"
+                android:textColor="@color/whitetransparent"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/qrcode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/green"
+                android:gravity="center_horizontal"
+                android:onClick="qrcodeClicked"
+                android:paddingTop="25dp"
+                android:text="@string/qrcode"
+                android:textColor="@color/whitetransparent"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:text="@string/last_update"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <ListView
+        android:id="@+id/android:list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="#b5b5b5"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/selector_list" />
+
+</LinearLayout>

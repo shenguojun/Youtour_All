@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="whitetransparent">#E1FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="gold">#b89766</color>
+    <color name="orange">#DF6D1E</color>
+    <color name="deeporange">#c55b11</color>
+    <color name="lightorange">#f28d00</color>
+    <color name="orangetransparent">#50DF6D1E</color>
+    <color name="grey">#413E3E</color>
+    <color name="background">#eee</color>
+    <color name="black">#000</color>
+    <color name="ligthgree">#DEFADC</color>
+    <color name="lightgrey">#F2F2F2</color>
+    <color name="popup_main_background">#b0000000</color>
+    <color name="choose_eara_item_press_color">#f4f4f4</color>
+    <color name="no_color">#00000000</color>
+    <color name="elsebackground">#eee2d2</color>
+    <color name="blue">#29a6e2</color>
+    <color name="red">#FD5B78</color>
+    <color name="green">#7fb80e</color>
+    <color name="purple">#6f599c</color>
+
+</resources>

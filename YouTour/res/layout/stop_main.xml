@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/grey"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/nextBtton"
+            android:layout_width="25dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_imagebutton"
+            android:onClick="nextbuttonClicked"
+            android:src="@drawable/next" />
+
+        <ImageButton
+            android:id="@+id/preBtton"
+            android:layout_width="25dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@id/nextBtton"
+            android:background="@drawable/selector_imagebutton"
+            android:onClick="prebuttonClicked"
+            android:src="@drawable/pre" />
+
+        <ImageButton
+            android:id="@+id/backBtton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/selector_imagebutton"
+            android:onClick="backClicked"
+            android:src="@drawable/left" />
+
+        <TextView
+            android:id="@+id/stop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scrollHorizontally="true"
+            android:text="广州传统文化四日游"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <com.sysu.shen.youtour.CustomScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/background" />
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pager"
+                android:background="@color/grey"
+                android:padding="5dp" />
+
+            <RelativeLayout
+                android:id="@+id/mediaPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/indicator"
+                android:background="@color/grey" >
+
+                <ImageView
+                    android:id="@+id/orangetop"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/orange" />
+
+                <ImageButton
+                    android:id="@+id/btn_play"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/orangetop"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_imagebutton"
+                    android:onClick="playMusic"
+                    android:src="@drawable/play_w" />
+
+                <TextView
+                    android:id="@+id/songCurrentDurationLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@id/btn_play"
+                    android:gravity="left"
+                    android:text="0:0"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+                <!-- Total Duration Label -->
+
+                <TextView
+                    android:id="@+id/songTotalDurationLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="3dp"
+                    android:paddingRight="15dp"
+                    android:text="0:0"
+                    android:textColor="@color/orange"
+                    android:textStyle="bold" />
+
+                <SeekBar
+                    android:id="@+id/songProgressBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/songTotalDurationLabel"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_toRightOf="@id/btn_play"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:progressDrawable="@drawable/seekbar_progress"
+                    android:thumb="@drawable/seek_handler" />
+
+                <ImageView
+                    android:id="@+id/orangebuttom"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/btn_play"
+                    android:background="@color/orange" />
+
+                <ImageView
+                    android:id="@+id/musicplayerbuttom"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@id/orangebuttom"
+                    android:background="@color/grey" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/mediaPlayer"
+                android:layout_margin="10dp"
+                android:background="@drawable/number"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/mediaPlayer"
+                android:layout_margin="10dp"
+                android:background="@drawable/map_btn_bg"
+                android:onClick="mapclicked" />
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mediaPlayer"
+                android:layout_margin="10dp"
+                android:layout_toLeftOf="@id/map"
+                android:background="@drawable/share_btn_bg"
+                android:onClick="shareclicked" />
+
+            <TextView
+                android:id="@+id/stop_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/number"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="10dp"
+                android:text="广州传统文化四日游"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+        </RelativeLayout>
+    </com.sysu.shen.youtour.CustomScrollView>
+
+</LinearLayout>

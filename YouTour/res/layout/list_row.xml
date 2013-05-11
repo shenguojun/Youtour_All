@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_list"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <!-- ListRow Left sied Thumbnail image -->
+
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/list_image"
+            android:layout_width="70dip"
+            android:layout_height="70dip"
+            android:scaleType="centerInside"
+            android:src="@drawable/no_image" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/adress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/thumbnail"
+        android:layout_toRightOf="@id/thumbnail"
+        android:layout_marginLeft="5dp"
+        android:text="中国广州"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/mm_submenu" />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adress"
+        android:scrollHorizontally="true"
+        android:layout_marginTop="5dip"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/thumbnail"
+        android:layout_toLeftOf="@id/arrow"
+        android:text="广州大学城四日游"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <RatingBar
+        android:id="@+id/rating_bar"
+        android:isIndicator="true"
+        android:numStars="5" 
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rating="3.5"
+        android:layout_toLeftOf="@id/arrow"
+        style="@style/MyRatingBar"
+        />
+
+    <TextView
+        android:id="@+id/price_text"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/thumbnail"
+        android:layout_alignRight="@id/title"
+        android:background="@drawable/btn_green" 
+        android:text="免费"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:gravity="center_horizontal"
+        />
+
+</RelativeLayout>
